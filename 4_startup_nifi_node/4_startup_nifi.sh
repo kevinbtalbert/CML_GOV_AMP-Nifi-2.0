@@ -1,5 +1,9 @@
 #!/bin/bash
 
+JAVA_VER="21.0.1"
+export JAVA_VER="21.0.1"
+export JAVA_HOME="/home/cdsw/java-21/jdk-${JAVA_VER}"
+
 # Define variables
 NIFI_HOME="$HOME/nifi_source/nifi-2.0.0"  # Update this path if NiFi is located elsewhere
 
