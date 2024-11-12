@@ -9,6 +9,8 @@ NIFI_HOME="$HOME/nifi_source/nifi-2.0.0"  # Update this path if NiFi is located 
 NIFI_USER="admin"
 NIFI_PASSWORD="Supersecret1"
 
+chmod +x $NIFI_HOME/bin/nifi.sh
+
 # Check for required environment variables
 if [[ -z "$CDSW_APP_PORT" ]]; then
   echo "Error: CDSW_APP_PORT environment variable is not set."
