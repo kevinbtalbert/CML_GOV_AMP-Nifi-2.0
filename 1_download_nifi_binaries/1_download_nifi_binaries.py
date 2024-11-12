@@ -4,8 +4,8 @@ import zipfile
 import os
 
 # Define the URL and paths
-nifi_url = "https://dlcdn.apache.org/nifi/2.0.0/nifi-2.0.0-source-release.zip"
-download_path = "/home/cdsw/nifi-2.0.0-source-release.zip"
+nifi_url = "https://dlcdn.apache.org/nifi/2.0.0/nifi-2.0.0-bin.zip"
+download_path = "/home/cdsw/nifi-2.0.0-bin.zip"
 extract_path = "/home/cdsw/nifi_source"
 
 # Download NiFi

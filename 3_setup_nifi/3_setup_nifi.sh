@@ -10,8 +10,8 @@ NIFI_USER="admin"
 NIFI_PASSWORD="Supersecret1"
 
 # Check for required environment variables
-if [[ -z "$CDSW_APP_PORT" || -z "$CDSW_HOST" ]]; then
-  echo "Error: CDSW_APP_PORT or CDSW_HOST environment variables are not set."
+if [[ -z "$CDSW_APP_PORT" ]]; then
+  echo "Error: CDSW_APP_PORT environment variable is not set."
   exit 1
 fi
 
