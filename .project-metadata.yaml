@@ -1,0 +1,46 @@
+name: NiFi 2.0 AMP
+description: "Deploy NiFi 2.0 with dependencies"
+author: "Cloudera"
+date: "2024-11-11"
+specification_version: 1.0
+prototype_version: 1.0
+
+runtimes: 
+  - editor: PBJ Workbench
+    kernel: Python 3.9
+    edition: GovCloud
+  
+tasks:
+  - type: run_session
+    name: Install Dependencies
+    script: 1_download_nifi_binaries/1_download_nifi_binaries.py
+    short_summary: Download Nifi 2.0 Binaries
+    kernel: python3
+    cpu: 2
+    memory: 4
+
+  - type: run_session
+    name: Download JDK 21
+    script: 2_download_java_21/2_download_java_21.py
+    short_summary: Download Java 21 Binaries
+    kernel: python3
+    cpu: 2
+    memory: 4
+
+  - type: run_session
+    name: Setup Nifi
+    script: 3_setup_nifi/3_setup_nifi.py
+    short_summary: Setup Nifi
+    kernel: python3
+    cpu: 2
+    memory: 4
+
+  - type: start_application
+    short_summary: Starting Nifi application
+    name: Nifi 2.0
+    subdomain: nifi
+    script: 4_startup_nifi/4_startup_nifi.py
+    environment_variables:
+      TASK_TYPE: START_APPLICATION
+    cpu: 4
+    memory: 8
